@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /publications/
-title: selected publications
-description: a full and up-to-date publication list is available on <a href='https://scholar.google.com/citations?user=s4Wt5kQAAAAJ'>Google Scholar</a>
+title: publications
+description: selected publications are shown below; for the complete list, please see <a href='https://scholar.google.com/citations?user=s4Wt5kQAAAAJ'>my Google Scholar profile</a>.
 nav: true
 nav_order: 2
 ---
