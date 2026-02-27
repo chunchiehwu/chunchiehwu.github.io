@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-20'
+  last_updated: '2026-02-27'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -46,7 +46,7 @@ papers:
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
-    citations: 241
+    citations: 242
     title: Interactions of the salience network and its subsystems with the default-mode and the central-executive networks in normal aging and mild cognitive impairment
     year: '2017'
   s4Wt5kQAAAAJ:M3ejUd6NZC8C:
@@ -73,16 +73,20 @@ papers:
     citations: 219
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
-  s4Wt5kQAAAAJ:ULOm3_A8WrAC:
+  s4Wt5kQAAAAJ:TFP_iSt0sucC:
     citations: 0
+    title: "Visual Memory Performance Correlates with Alzheimer\u2019s Disease Biomarkers in Cognitively Normal Individuals"
+    year: '2025'
+  s4Wt5kQAAAAJ:ULOm3_A8WrAC:
+    citations: 1
     title: Simultaneous cerebral blood flow and bold oxygen level dependent signal assessments using multi-band multi-echo pseudo-continuous arterial spin labeling (M2-PCASL)
     year: '2017'
   s4Wt5kQAAAAJ:W7OEmFMy1HYC:
-    citations: 96
+    citations: 97
     title: 'The effects of music on brain functional networks: a network analysis'
     year: '2013'
   s4Wt5kQAAAAJ:WF5omc3nYNoC:
-    citations: 25
+    citations: 26
     title: "Acetazolamide-augmented dynamic BOLD (aczBOLD) imaging for assessing cerebrovascular reactivity in chronic steno-occlusive disease of the anterior circulation: An initial \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:Wp0gIr-vW9MC:
@@ -125,6 +129,10 @@ papers:
     citations: 0
     title: 'Advanced MRI evaluation of early radiation damage to the brain in children with primary brain tumors: Preliminary findings'
     year: '2016'
+  s4Wt5kQAAAAJ:bEWYMUwI8FkC:
+    citations: 0
+    title: "Non-linear associations of amyloid- with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal \u2026"
+    year: '2025'
   s4Wt5kQAAAAJ:dhFuZR0502QC:
     citations: 0
     title: Race modifies default mode network connectivity in Alzheimer's disease
@@ -134,7 +142,7 @@ papers:
     title: "Multimodal magnetic resonance imaging reveals distinct sensitivity of hippocampal subfields in asymptomatic stage of Alzheimer\u2019s disease"
     year: '2022'
   s4Wt5kQAAAAJ:eQOLeE2rZwMC:
-    citations: 33
+    citations: 34
     title: "The esthetic preference of Chinese typefaces\u2013An event-related potential study"
     year: '2015'
   s4Wt5kQAAAAJ:hC7cP41nSMkC:
@@ -142,7 +150,7 @@ papers:
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 87
+    citations: 88
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
@@ -158,7 +166,7 @@ papers:
     title: Dynamic functional connectivity using multi-band multi-echo EPI (M2-EPI) imaging for resting-state fMRI
     year: '2017'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 87
+    citations: 88
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
