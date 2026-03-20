@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-27'
+  last_updated: '2026-03-20'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -14,7 +14,7 @@ papers:
     title: Relationship of brain temperature and cerebrovascular reserve in patients with chronic steno-occlusive disease
     year: '2016'
   s4Wt5kQAAAAJ:4JMBOYKVnBMC:
-    citations: 25
+    citations: 26
     title: Magnetic resonance evidence of increased iron content in subcortical brain regions in asymptomatic Alzheimer's disease
     year: '2023'
   s4Wt5kQAAAAJ:4TOpqqG69KYC:
@@ -46,7 +46,7 @@ papers:
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
-    citations: 242
+    citations: 244
     title: Interactions of the salience network and its subsystems with the default-mode and the central-executive networks in normal aging and mild cognitive impairment
     year: '2017'
   s4Wt5kQAAAAJ:M3ejUd6NZC8C:
@@ -62,7 +62,7 @@ papers:
     title: 'Cerebral MR oximetry during acetazolamide augmentation: Beyond cerebrovascular reactivity in hemodynamic failure'
     year: '2019'
   s4Wt5kQAAAAJ:R3hNpaxXUhUC:
-    citations: 2
+    citations: 3
     title: 'Alterations in functional network topology within normal hemispheres contralateral to anterior circulation steno-occlusive disease: A resting-state BOLD study'
     year: '2022'
   s4Wt5kQAAAAJ:RHpTSmoSYBkC:
@@ -70,7 +70,7 @@ papers:
     title: "Brain Iron Deposition in Healthy Aging and association with Alzheimer\u2019s Disease Pathology Revealed by Quantitative Susceptibility Mapping"
     year: '2022'
   s4Wt5kQAAAAJ:Se3iqnhoufwC:
-    citations: 219
+    citations: 223
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
   s4Wt5kQAAAAJ:TFP_iSt0sucC:
@@ -86,7 +86,7 @@ papers:
     title: 'The effects of music on brain functional networks: a network analysis'
     year: '2013'
   s4Wt5kQAAAAJ:WF5omc3nYNoC:
-    citations: 26
+    citations: 28
     title: "Acetazolamide-augmented dynamic BOLD (aczBOLD) imaging for assessing cerebrovascular reactivity in chronic steno-occlusive disease of the anterior circulation: An initial \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:Wp0gIr-vW9MC:
@@ -94,7 +94,7 @@ papers:
     title: 'NRSC: A density-connected algorithm for detecting non-redundant subspace clusters'
     year: '2008'
   s4Wt5kQAAAAJ:Y0pCki6q_DkC:
-    citations: 79
+    citations: 81
     title: Graph theoretical analysis of EEG functional connectivity during music perception
     year: '2012'
   s4Wt5kQAAAAJ:YOwf2qJgpHMC:
@@ -102,11 +102,11 @@ papers:
     title: Reproducibility of resting state functional MRI graph theory metrics across three MRI platforms at 3.0T
     year: '2017'
   s4Wt5kQAAAAJ:YsMSGLbcyi4C:
-    citations: 27
+    citations: 29
     title: "The effects of acetazolamide on the evaluation of cerebral hemodynamics and functional connectivity using blood oxygen level\u2013dependent MR imaging in patients with chronic steno \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:ZeXyd9-uunAC:
-    citations: 3
+    citations: 4
     title: 'Spontaneous non-aneurysmal subarachnoid hemorrhage in Takayasu arteritis: a case implicating hyperperfusion and cerebral dysautoregulation'
     year: '2019'
   s4Wt5kQAAAAJ:Zph67rFs4hoC:
@@ -129,10 +129,6 @@ papers:
     citations: 0
     title: 'Advanced MRI evaluation of early radiation damage to the brain in children with primary brain tumors: Preliminary findings'
     year: '2016'
-  s4Wt5kQAAAAJ:bEWYMUwI8FkC:
-    citations: 0
-    title: "Non-linear associations of amyloid- with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal \u2026"
-    year: '2025'
   s4Wt5kQAAAAJ:dhFuZR0502QC:
     citations: 0
     title: Race modifies default mode network connectivity in Alzheimer's disease
@@ -156,6 +152,10 @@ papers:
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
     citations: 0
     title: "Benchmark White Matter Hyperintensity Segmentation Methods Fail on Heterogeneous Clinical MRI: A New Dataset and Deep Learning\u2013Based Solutions"
+    year: '2026'
+  s4Wt5kQAAAAJ:isC4tDSrTZIC:
+    citations: 0
+    title: "Non-linear associations of amyloid-\u03B2 with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal older adults"
     year: '2026'
   s4Wt5kQAAAAJ:j3f4tGmQtD8C:
     citations: 9
@@ -182,7 +182,7 @@ papers:
     title: Relationship between cerebrovascular reserve and brain temperature following acetazolamide challenge in patients with chronic steno-occlusive disease
     year: '2016'
   s4Wt5kQAAAAJ:r0BpntZqJG4C:
-    citations: 8
+    citations: 9
     title: "Probing locus coeruleus functional network in healthy aging and its association with Alzheimer\u2019s disease biomarkers using pupillometry"
     year: '2025'
   s4Wt5kQAAAAJ:ufrVoPGSRksC:
