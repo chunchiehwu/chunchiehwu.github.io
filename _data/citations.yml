@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-25'
+  last_updated: '2026-04-03'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -46,7 +46,7 @@ papers:
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
-    citations: 244
+    citations: 245
     title: Interactions of the salience network and its subsystems with the default-mode and the central-executive networks in normal aging and mild cognitive impairment
     year: '2017'
   s4Wt5kQAAAAJ:M3ejUd6NZC8C:
@@ -82,7 +82,7 @@ papers:
     title: Simultaneous cerebral blood flow and bold oxygen level dependent signal assessments using multi-band multi-echo pseudo-continuous arterial spin labeling (M2-PCASL)
     year: '2017'
   s4Wt5kQAAAAJ:W7OEmFMy1HYC:
-    citations: 97
+    citations: 98
     title: 'The effects of music on brain functional networks: a network analysis'
     year: '2013'
   s4Wt5kQAAAAJ:WF5omc3nYNoC:
@@ -146,7 +146,7 @@ papers:
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 88
+    citations: 89
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
@@ -166,7 +166,7 @@ papers:
     title: Dynamic functional connectivity using multi-band multi-echo EPI (M2-EPI) imaging for resting-state fMRI
     year: '2017'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 88
+    citations: 89
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
