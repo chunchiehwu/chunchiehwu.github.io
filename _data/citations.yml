@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-03'
+  last_updated: '2026-04-08'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -46,7 +46,7 @@ papers:
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
-    citations: 245
+    citations: 246
     title: Interactions of the salience network and its subsystems with the default-mode and the central-executive networks in normal aging and mild cognitive impairment
     year: '2017'
   s4Wt5kQAAAAJ:M3ejUd6NZC8C:
@@ -70,7 +70,7 @@ papers:
     title: "Brain Iron Deposition in Healthy Aging and association with Alzheimer\u2019s Disease Pathology Revealed by Quantitative Susceptibility Mapping"
     year: '2022'
   s4Wt5kQAAAAJ:Se3iqnhoufwC:
-    citations: 225
+    citations: 226
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
   s4Wt5kQAAAAJ:TFP_iSt0sucC:
@@ -154,7 +154,7 @@ papers:
     title: "Benchmark White Matter Hyperintensity Segmentation Methods Fail on Heterogeneous Clinical MRI: A New Dataset and Deep Learning\u2013Based Solutions"
     year: '2026'
   s4Wt5kQAAAAJ:isC4tDSrTZIC:
-    citations: 0
+    citations: 1
     title: "Non-linear associations of amyloid-\u03B2 with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal older adults"
     year: '2026'
   s4Wt5kQAAAAJ:j3f4tGmQtD8C:
@@ -182,7 +182,7 @@ papers:
     title: Relationship between cerebrovascular reserve and brain temperature following acetazolamide challenge in patients with chronic steno-occlusive disease
     year: '2016'
   s4Wt5kQAAAAJ:r0BpntZqJG4C:
-    citations: 9
+    citations: 10
     title: "Probing locus coeruleus functional network in healthy aging and its association with Alzheimer\u2019s disease biomarkers using pupillometry"
     year: '2025'
   s4Wt5kQAAAAJ:ufrVoPGSRksC:
