@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-15'
+  last_updated: '2026-04-29'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -42,7 +42,7 @@ papers:
     title: Racial differences in cerebral microcirculatory function and cognitive function
     year: '2017'
   s4Wt5kQAAAAJ:L8Ckcad2t8MC:
-    citations: 6
+    citations: 7
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
@@ -70,7 +70,7 @@ papers:
     title: "Brain Iron Deposition in Healthy Aging and association with Alzheimer\u2019s Disease Pathology Revealed by Quantitative Susceptibility Mapping"
     year: '2022'
   s4Wt5kQAAAAJ:Se3iqnhoufwC:
-    citations: 226
+    citations: 227
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
   s4Wt5kQAAAAJ:TFP_iSt0sucC:
@@ -146,7 +146,7 @@ papers:
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 90
+    citations: 92
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
@@ -154,7 +154,7 @@ papers:
     title: "Benchmark White Matter Hyperintensity Segmentation Methods Fail on Heterogeneous Clinical MRI: A New Dataset and Deep Learning\u2013Based Solutions"
     year: '2026'
   s4Wt5kQAAAAJ:isC4tDSrTZIC:
-    citations: 1
+    citations: 2
     title: "Non-linear associations of amyloid-\u03B2 with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal older adults"
     year: '2026'
   s4Wt5kQAAAAJ:j3f4tGmQtD8C:
@@ -165,8 +165,12 @@ papers:
     citations: 0
     title: Dynamic functional connectivity using multi-band multi-echo EPI (M2-EPI) imaging for resting-state fMRI
     year: '2017'
+  s4Wt5kQAAAAJ:k_IJM867U9cC:
+    citations: 0
+    title: Visual memory correlates with AD biomarkers in cognitively unimpaired individuals
+    year: '2026'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 90
+    citations: 92
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
