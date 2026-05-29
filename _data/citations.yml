@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-04'
+  last_updated: '2026-05-29'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -14,7 +14,7 @@ papers:
     title: Relationship of brain temperature and cerebrovascular reserve in patients with chronic steno-occlusive disease
     year: '2016'
   s4Wt5kQAAAAJ:4JMBOYKVnBMC:
-    citations: 26
+    citations: 27
     title: Magnetic resonance evidence of increased iron content in subcortical brain regions in asymptomatic Alzheimer's disease
     year: '2023'
   s4Wt5kQAAAAJ:4TOpqqG69KYC:
@@ -46,7 +46,7 @@ papers:
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
-    citations: 247
+    citations: 249
     title: Interactions of the salience network and its subsystems with the default-mode and the central-executive networks in normal aging and mild cognitive impairment
     year: '2017'
   s4Wt5kQAAAAJ:M3ejUd6NZC8C:
@@ -70,7 +70,7 @@ papers:
     title: "Brain Iron Deposition in Healthy Aging and association with Alzheimer\u2019s Disease Pathology Revealed by Quantitative Susceptibility Mapping"
     year: '2022'
   s4Wt5kQAAAAJ:Se3iqnhoufwC:
-    citations: 227
+    citations: 229
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
   s4Wt5kQAAAAJ:TFP_iSt0sucC:
@@ -114,7 +114,7 @@ papers:
     title: "Measurement of mean transit time changes in response to acetozalomide challenge in patients with cerebral steno-occlusive disease: A study using dynamic susceptibility contrast \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:_FxGoFyzp5QC:
-    citations: 26
+    citations: 27
     title: The brain thermal response as a potential neuroimaging biomarker of cerebrovascular impairment
     year: '2017'
   s4Wt5kQAAAAJ:_Qo2XoVZTnwC:
@@ -138,15 +138,15 @@ papers:
     title: "Multimodal magnetic resonance imaging reveals distinct sensitivity of hippocampal subfields in asymptomatic stage of Alzheimer\u2019s disease"
     year: '2022'
   s4Wt5kQAAAAJ:eQOLeE2rZwMC:
-    citations: 35
+    citations: 37
     title: "The esthetic preference of Chinese typefaces\u2013An event-related potential study"
     year: '2015'
   s4Wt5kQAAAAJ:hC7cP41nSMkC:
-    citations: 37
+    citations: 38
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 92
+    citations: 93
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
@@ -158,7 +158,7 @@ papers:
     title: "Non-linear associations of amyloid-\u03B2 with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal older adults"
     year: '2026'
   s4Wt5kQAAAAJ:j3f4tGmQtD8C:
-    citations: 9
+    citations: 11
     title: A novel classification framework for genome-wide association study of whole brain MRI images using deep learning
     year: '2024'
   s4Wt5kQAAAAJ:kNdYIx-mwKoC:
@@ -170,7 +170,7 @@ papers:
     title: Visual memory correlates with AD biomarkers in cognitively unimpaired individuals
     year: '2026'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 92
+    citations: 93
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
@@ -186,7 +186,7 @@ papers:
     title: Relationship between cerebrovascular reserve and brain temperature following acetazolamide challenge in patients with chronic steno-occlusive disease
     year: '2016'
   s4Wt5kQAAAAJ:r0BpntZqJG4C:
-    citations: 10
+    citations: 11
     title: "Probing locus coeruleus functional network in healthy aging and its association with Alzheimer\u2019s disease biomarkers using pupillometry"
     year: '2025'
   s4Wt5kQAAAAJ:ufrVoPGSRksC:
