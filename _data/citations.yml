@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-15'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -46,7 +46,7 @@ papers:
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
-    citations: 251
+    citations: 253
     title: Interactions of the salience network and its subsystems with the default-mode and the central-executive networks in normal aging and mild cognitive impairment
     year: '2017'
   s4Wt5kQAAAAJ:M3ejUd6NZC8C:
@@ -70,7 +70,7 @@ papers:
     title: "Brain Iron Deposition in Healthy Aging and association with Alzheimer\u2019s Disease Pathology Revealed by Quantitative Susceptibility Mapping"
     year: '2022'
   s4Wt5kQAAAAJ:Se3iqnhoufwC:
-    citations: 232
+    citations: 233
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
   s4Wt5kQAAAAJ:TFP_iSt0sucC:
@@ -94,7 +94,7 @@ papers:
     title: 'NRSC: A density-connected algorithm for detecting non-redundant subspace clusters'
     year: '2008'
   s4Wt5kQAAAAJ:Y0pCki6q_DkC:
-    citations: 83
+    citations: 81
     title: Graph theoretical analysis of EEG functional connectivity during music perception
     year: '2012'
   s4Wt5kQAAAAJ:YOwf2qJgpHMC:
@@ -154,11 +154,11 @@ papers:
     title: "Benchmark White Matter Hyperintensity Segmentation Methods Fail on Heterogeneous Clinical MRI: A New Dataset and Deep Learning\u2013Based Solutions"
     year: '2026'
   s4Wt5kQAAAAJ:isC4tDSrTZIC:
-    citations: 2
+    citations: 3
     title: "Non-linear associations of amyloid-\u03B2 with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal older adults"
     year: '2026'
   s4Wt5kQAAAAJ:j3f4tGmQtD8C:
-    citations: 14
+    citations: 15
     title: A novel classification framework for genome-wide association study of whole brain MRI images using deep learning
     year: '2024'
   s4Wt5kQAAAAJ:kNdYIx-mwKoC:
@@ -186,7 +186,7 @@ papers:
     title: Relationship between cerebrovascular reserve and brain temperature following acetazolamide challenge in patients with chronic steno-occlusive disease
     year: '2016'
   s4Wt5kQAAAAJ:r0BpntZqJG4C:
-    citations: 13
+    citations: 14
     title: "Probing locus coeruleus functional network in healthy aging and its association with Alzheimer\u2019s disease biomarkers using pupillometry"
     year: '2025'
   s4Wt5kQAAAAJ:ufrVoPGSRksC:
