@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-20'
+  last_updated: '2026-07-27'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 24
@@ -70,7 +70,7 @@ papers:
     title: "Brain Iron Deposition in Healthy Aging and association with Alzheimer\u2019s Disease Pathology Revealed by Quantitative Susceptibility Mapping"
     year: '2022'
   s4Wt5kQAAAAJ:Se3iqnhoufwC:
-    citations: 234
+    citations: 233
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
   s4Wt5kQAAAAJ:TFP_iSt0sucC:
@@ -94,7 +94,7 @@ papers:
     title: 'NRSC: A density-connected algorithm for detecting non-redundant subspace clusters'
     year: '2008'
   s4Wt5kQAAAAJ:Y0pCki6q_DkC:
-    citations: 81
+    citations: 83
     title: Graph theoretical analysis of EEG functional connectivity during music perception
     year: '2012'
   s4Wt5kQAAAAJ:YOwf2qJgpHMC:
@@ -150,7 +150,7 @@ papers:
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
-    citations: 0
+    citations: 1
     title: "Benchmark White Matter Hyperintensity Segmentation Methods Fail on Heterogeneous Clinical MRI: A New Dataset and Deep Learning\u2013Based Solutions"
     year: '2026'
   s4Wt5kQAAAAJ:isC4tDSrTZIC:
@@ -186,7 +186,7 @@ papers:
     title: Relationship between cerebrovascular reserve and brain temperature following acetazolamide challenge in patients with chronic steno-occlusive disease
     year: '2016'
   s4Wt5kQAAAAJ:r0BpntZqJG4C:
-    citations: 14
+    citations: 15
     title: "Probing locus coeruleus functional network in healthy aging and its association with Alzheimer\u2019s disease biomarkers using pupillometry"
     year: '2025'
   s4Wt5kQAAAAJ:ufrVoPGSRksC:
