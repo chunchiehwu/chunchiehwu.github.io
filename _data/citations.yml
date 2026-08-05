@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-07-27'
+  last_updated: '2026-08-05'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
-    citations: 24
+    citations: 25
     title: Interactions of Insula Subdivisions-Based Networks with Default-Mode and Central-Executive Networks in Mild Cognitive Impairment
     year: '2017'
   s4Wt5kQAAAAJ:3fE2CSJIrl8C:
@@ -30,7 +30,7 @@ papers:
     title: Quantitative susceptibility imaging for the assessment of early radiation-induced white matter injury in children with primary brain tumors
     year: '2018'
   s4Wt5kQAAAAJ:9ZlFYXVOiuMC:
-    citations: 8
+    citations: 7
     title: "Simultaneous perfusion and permeability assessments using multiband multi\u2010echo EPI (M2\u2010EPI) in brain tumors"
     year: '2019'
   s4Wt5kQAAAAJ:HDshCWvjkbEC:
@@ -46,7 +46,7 @@ papers:
     title: "Variability of Resting\u2010State Functional MRI Graph Theory Metrics across 3T Platforms"
     year: '2019'
   s4Wt5kQAAAAJ:LkGwnXOMwfcC:
-    citations: 253
+    citations: 254
     title: Interactions of the salience network and its subsystems with the default-mode and the central-executive networks in normal aging and mild cognitive impairment
     year: '2017'
   s4Wt5kQAAAAJ:M3ejUd6NZC8C:
@@ -58,11 +58,11 @@ papers:
     title: Oxygen extraction fraction and R2* mapping in cerebrovascular disease using an acetazolamide challenge
     year: '2018'
   s4Wt5kQAAAAJ:QIV2ME_5wuYC:
-    citations: 8
+    citations: 9
     title: 'Cerebral MR oximetry during acetazolamide augmentation: Beyond cerebrovascular reactivity in hemodynamic failure'
     year: '2019'
   s4Wt5kQAAAAJ:R3hNpaxXUhUC:
-    citations: 3
+    citations: 4
     title: 'Alterations in functional network topology within normal hemispheres contralateral to anterior circulation steno-occlusive disease: A resting-state BOLD study'
     year: '2022'
   s4Wt5kQAAAAJ:RHpTSmoSYBkC:
@@ -82,11 +82,11 @@ papers:
     title: Simultaneous cerebral blood flow and bold oxygen level dependent signal assessments using multi-band multi-echo pseudo-continuous arterial spin labeling (M2-PCASL)
     year: '2017'
   s4Wt5kQAAAAJ:W7OEmFMy1HYC:
-    citations: 98
+    citations: 97
     title: 'The effects of music on brain functional networks: a network analysis'
     year: '2013'
   s4Wt5kQAAAAJ:WF5omc3nYNoC:
-    citations: 30
+    citations: 31
     title: "Acetazolamide-augmented dynamic BOLD (aczBOLD) imaging for assessing cerebrovascular reactivity in chronic steno-occlusive disease of the anterior circulation: An initial \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:Wp0gIr-vW9MC:
@@ -146,7 +146,7 @@ papers:
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 93
+    citations: 92
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
@@ -158,7 +158,7 @@ papers:
     title: "Non-linear associations of amyloid-\u03B2 with resting-state functional networks and their cognitive relevance in a large community-based cohort of cognitively normal older adults"
     year: '2026'
   s4Wt5kQAAAAJ:j3f4tGmQtD8C:
-    citations: 15
+    citations: 17
     title: A novel classification framework for genome-wide association study of whole brain MRI images using deep learning
     year: '2024'
   s4Wt5kQAAAAJ:kNdYIx-mwKoC:
@@ -170,7 +170,7 @@ papers:
     title: Visual memory correlates with AD biomarkers in cognitively unimpaired individuals
     year: '2026'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 93
+    citations: 92
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
@@ -178,7 +178,7 @@ papers:
     title: A new model of enterprise credit risk assessment based on BP neural network
     year: '2008'
   s4Wt5kQAAAAJ:qUcmZB5y_30C:
-    citations: 23
+    citations: 22
     title: Neuroimaging correlates of cognitive changes after bariatric surgery
     year: '2020'
   s4Wt5kQAAAAJ:qxL8FJ1GzNcC:
@@ -190,6 +190,6 @@ papers:
     title: "Probing locus coeruleus functional network in healthy aging and its association with Alzheimer\u2019s disease biomarkers using pupillometry"
     year: '2025'
   s4Wt5kQAAAAJ:ufrVoPGSRksC:
-    citations: 29
+    citations: 28
     title: Racial differences in insular connectivity and thickness and related cognitive impairment in hypertension
     year: '2017'
