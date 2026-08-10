@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-10'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 25
@@ -62,7 +62,7 @@ papers:
     title: 'Cerebral MR oximetry during acetazolamide augmentation: Beyond cerebrovascular reactivity in hemodynamic failure'
     year: '2019'
   s4Wt5kQAAAAJ:R3hNpaxXUhUC:
-    citations: 4
+    citations: 3
     title: 'Alterations in functional network topology within normal hemispheres contralateral to anterior circulation steno-occlusive disease: A resting-state BOLD study'
     year: '2022'
   s4Wt5kQAAAAJ:RHpTSmoSYBkC:
@@ -70,7 +70,7 @@ papers:
     title: "Brain Iron Deposition in Healthy Aging and association with Alzheimer\u2019s Disease Pathology Revealed by Quantitative Susceptibility Mapping"
     year: '2022'
   s4Wt5kQAAAAJ:Se3iqnhoufwC:
-    citations: 233
+    citations: 234
     title: "Race modifies the relationship between cognition and Alzheimer\u2019s disease cerebrospinal fluid biomarkers"
     year: '2017'
   s4Wt5kQAAAAJ:TFP_iSt0sucC:
@@ -86,7 +86,7 @@ papers:
     title: 'The effects of music on brain functional networks: a network analysis'
     year: '2013'
   s4Wt5kQAAAAJ:WF5omc3nYNoC:
-    citations: 31
+    citations: 30
     title: "Acetazolamide-augmented dynamic BOLD (aczBOLD) imaging for assessing cerebrovascular reactivity in chronic steno-occlusive disease of the anterior circulation: An initial \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:Wp0gIr-vW9MC:
@@ -102,7 +102,7 @@ papers:
     title: Reproducibility of resting state functional MRI graph theory metrics across three MRI platforms at 3.0T
     year: '2017'
   s4Wt5kQAAAAJ:YsMSGLbcyi4C:
-    citations: 31
+    citations: 30
     title: "The effects of acetazolamide on the evaluation of cerebral hemodynamics and functional connectivity using blood oxygen level\u2013dependent MR imaging in patients with chronic steno \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:ZeXyd9-uunAC:
@@ -146,7 +146,7 @@ papers:
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 92
+    citations: 93
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
@@ -170,7 +170,7 @@ papers:
     title: Visual memory correlates with AD biomarkers in cognitively unimpaired individuals
     year: '2026'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 92
+    citations: 93
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
