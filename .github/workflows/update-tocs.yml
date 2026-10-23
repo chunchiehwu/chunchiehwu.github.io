@@ -28,6 +28,12 @@ jobs:
         with:
           files: ./*.md
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install locked formatter dependencies
+        run: npm ci
+
       - name: Updated toc on all markdown changed files
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
@@ -40,6 +46,7 @@ jobs:
               continue
             fi
             ./gh-md-toc --indent 2 --insert --no-backup --hide-footer $file
+            npx prettier --write "$file"
           done
           rm gh-md-toc
 
