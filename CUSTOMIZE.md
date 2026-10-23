@@ -62,7 +62,7 @@ Here we will give you some tips on how to customize the website. One important t
     - [How it works](#how-it-works)
     - [Configuration](#configuration-1)
     - [Disable related posts for a specific post](#disable-related-posts-for-a-specific-post)
-    - [Additional configuration in _config.yml](#additional-configuration-in-_configyml)
+    - [Additional configuration in \_config.yml](#additional-configuration-in-_configyml)
   - [Managing publication display](#managing-publication-display)
   - [Adding a Google Calendar](#adding-a-google-calendar)
     - [Basic usage](#basic-usage)
@@ -1359,44 +1359,24 @@ For more API details, see [Vanilla Cookie Consent documentation](https://cookiec
 
 ---
 
-## Setting up a Personal Access Token (PAT) for Google Scholar Citation Updates
+## Automatic publication metrics
 
-> [!TIP]
-> After setting up al-folio you may want to run `python3 bin/update_citations.py` to fill the `_data/citations.yml` file with your Google Scholar citation counts.
+Publication badges are enabled in `_config.yml` under `enable_publication_badges`.
 
-This project includes an automated workflow to update the citation counts for your publications using Google Scholar.
-The workflow commits changes to `_data/citations.yml` directly to the `main` branch.
-By default, the `GITHUB_TOKEN` will be used to commit the changes.
-However, this token does not have permission to trigger subsequent workflows, such as the site rebuild workflow.
-In order to deploy the changes from `main`, you can manually trigger the `deploy` workflow.
+- **Altmetric attention scores** and **Dimensions citation counts** load from the providers through the scripts in `_includes/scripts.liquid` whenever a reader visits the page. They do not need a scheduled site rebuild. Add a DOI or PMID and `altmetric = {true}` / `dimensions = {true}` to the corresponding entry in `_bibliography/papers.bib`, or supply the provider's identifier. Provider indexing and caching determine when new activity appears. See the [Altmetric badge documentation](https://badge-docs.altmetric.com/getting-started.html) and [Dimensions badge documentation](https://badge.dimensions.ai/).
+- **Google Scholar citations** are cached in `_data/citations.yml`. Set `scholar_userid` in `_data/socials.yml` and each paper's `google_scholar_id` in `_bibliography/papers.bib`. `.github/workflows/update-citations.yml` refreshes the cache on Monday, Wednesday, and Friday at 06:23 UTC; GitHub may delay scheduled runs. For a local refresh, install `requirements-citations.txt` in a separate Python environment, then run `python3 bin/update_scholar_citations.py` from the repository root. This dependency file keeps Scholar's BibTeX dependencies separate from RenderCV.
 
-> [!TIP]
-> To ensure that these commits can trigger further GitHub Actions workflows (such as site rebuilds), you can use a Personal Access Token (PAT) instead of the default GitHub Actions token.
-> If you have set up a PAT, citation updates will trigger further workflows (such as site rebuilds) after committing changes. In order to run the action with a PAT, you need to uncomment the following lines from the workflow file (`update-citations.yml`):
->
-> ```yaml
-> with:
->   token: ${{ secrets.PAT }}
-> ```
+When citation counts change, the workflow commits the cache and calls the reusable `deploy.yml` workflow with the new commit SHA. This rebuilds and publishes the updated badges using `GITHUB_TOKEN`; no personal access token or `PAT` secret is needed. The update job requires `contents: write`. An unchanged result skips deployment; `metadata.last_updated` records the last change to the cached data.
 
-### Why is a PAT required?
+### Keeping the schedule active and troubleshooting
 
-GitHub restricts the default `GITHUB_TOKEN` from triggering other workflows when a commit is made from within a workflow. Using a PAT overcomes this limitation and allows for full automation.
+[GitHub disables scheduled workflows after 60 days without repository activity](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule), even if scheduled runs have continued. A separate keepalive job uses `actions: write` to refresh this workflow through the [enable-workflow API](https://docs.github.com/en/rest/actions/workflows#enable-a-workflow), including when citation counts are unchanged or the fetch job fails.
 
-### How to set up the PAT
+To refresh immediately, manually dispatch **Update Google Scholar Citations** on the default branch. If GitHub has already disabled it, enable it first. With GitHub CLI:
 
-1. **Create a Personal Access Token**
-   - Go to [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens).
-   - Click "Generate new token" (classic or fine-grained).
-   - Grant at least the following permissions:
-     - `repo` (for classic tokens if repo is private), `public_repo` (for classic tokens if repo is public) or `contents: read/write` (for fine-grained tokens)
-   - Save the token somewhere safe.
+```bash
+gh workflow enable update-citations.yml
+gh workflow run update-citations.yml
+```
 
-2. **Add the PAT as a repository secret**
-   - Go to your repository on GitHub.
-   - Navigate to `Settings` > `Secrets and variables` > `Actions` > `New repository secret`.
-   - Name the secret `PAT` (must match the name used in the workflow).
-   - Paste your PAT and save.
-
-3. **Workflow usage**
-   The workflow `.github/workflows/update-citations.yml` uses this PAT to commit updates to `_data/citations.yml`.
+Google Scholar can block automated requests. Fetch errors and the five-minute timeout fail the update job visibly; the published cache remains available and the next scheduled run tries again. Check the workflow log and summary if counts stay stale. The keepalive job runs independently of the fetch, but a disabled workflow must be re-enabled before its schedule can resume.

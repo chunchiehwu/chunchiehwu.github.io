@@ -60,6 +60,12 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit to build after an automated citation update
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -71,6 +77,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:

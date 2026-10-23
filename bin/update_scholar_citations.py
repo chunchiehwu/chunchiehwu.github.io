@@ -40,12 +40,15 @@ def get_scholar_citations() -> None:
     """Fetch and update Google Scholar citation data."""
     print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
     today = datetime.now().strftime("%Y-%m-%d")
+    existing_data = {}
 
     # Check if the output file was already updated today
     if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, "r") as f:
-                existing_data = yaml.safe_load(f)
+                existing_data = yaml.safe_load(f) or {}
+            if not isinstance(existing_data, dict):
+                raise ValueError("Citation data must be a YAML mapping.")
             if (
                 existing_data
                 and "metadata" in existing_data
@@ -56,6 +59,7 @@ def get_scholar_citations() -> None:
                     print("Citations data is already up-to-date. Skipping fetch.")
                     return
         except Exception as e:
+            existing_data = {}
             print(
                 f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
             )
@@ -79,7 +83,7 @@ def get_scholar_citations() -> None:
         )
         sys.exit(1)
 
-    if "publications" not in author_data:
+    if not author_data.get("publications"):
         print(f"No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
         sys.exit(1)
 
@@ -108,7 +112,11 @@ def get_scholar_citations() -> None:
                 f"Error processing publication '{pub.get('bib', {}).get('title', 'Unknown')}': {e}. This publication will be skipped."
             )
 
-    # Compare new data with existing data
+    if not citation_data["papers"]:
+        print("No valid publications fetched. Keeping the existing citation data.")
+        sys.exit(1)
+
+    # Compare new data with existing data. last_updated is the last data change.
     if existing_data and existing_data.get("papers") == citation_data["papers"]:
         print("No changes in citation data. Skipping file update.")
         return

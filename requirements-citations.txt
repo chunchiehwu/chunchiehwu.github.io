@@ -1,0 +1,4 @@
+# scholarly imports bibtexparser.bibdatabase, which is unavailable in version 2.
+bibtexparser>=1.4,<2
+PyYAML>=6,<7
+scholarly==1.7.11
