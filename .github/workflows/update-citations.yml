@@ -57,7 +57,7 @@ jobs:
 
       - name: Update Google Scholar citations
         id: fetch
-        run: timeout 300 python -u bin/update_scholar_citations.py
+        run: timeout 300 python -u bin/update_scholar_citations.py --force
 
       - name: Report fetch failure
         if: failure() && steps.fetch.outcome == 'failure'

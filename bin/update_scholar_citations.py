@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import argparse
+import logging
 import os
 import sys
 import yaml
@@ -36,7 +38,7 @@ SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
 
 
-def get_scholar_citations() -> None:
+def get_scholar_citations(force: bool = False) -> None:
     """Fetch and update Google Scholar citation data."""
     print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
     today = datetime.now().strftime("%Y-%m-%d")
@@ -55,7 +57,7 @@ def get_scholar_citations() -> None:
                 and "last_updated" in existing_data["metadata"]
             ):
                 print(f"Last updated on: {existing_data['metadata']['last_updated']}")
-                if existing_data["metadata"]["last_updated"] == today:
+                if not force and existing_data["metadata"]["last_updated"] == today:
                     print("Citations data is already up-to-date. Skipping fetch.")
                     return
         except Exception as e:
@@ -70,7 +72,9 @@ def get_scholar_citations() -> None:
     scholarly.set_retries(3)
     try:
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
-        author_data = scholarly.fill(author)
+        # The default also requests coauthors and public-access mandates, which
+        # can block independently even when the publication list is available.
+        author_data = scholarly.fill(author, sections=["publications"])
     except Exception as e:
         print(
             f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
@@ -133,8 +137,13 @@ def get_scholar_citations() -> None:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Refresh cached Scholar citations.")
+    parser.add_argument("--force", action="store_true", help="Fetch even if the cache was updated today.")
+    args = parser.parse_args()
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+    scholarly.set_logger(True)
     try:
-        get_scholar_citations()
+        get_scholar_citations(force=args.force)
     except Exception as e:
         print(f"Unexpected error: {e}")
         sys.exit(1)

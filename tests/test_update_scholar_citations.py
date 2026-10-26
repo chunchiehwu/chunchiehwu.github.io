@@ -96,6 +96,16 @@ class CitationCacheTests(unittest.TestCase):
         self.scholar.search_author_id.assert_not_called()
         self.assertEqual(self.cache.read_bytes(), original)
 
+    def test_forced_same_day_refresh_fetches_publications(self):
+        self.old_data["metadata"]["last_updated"] = datetime.now().strftime("%Y-%m-%d")
+        self.write_old_cache()
+        updater.get_scholar_citations(force=True)
+        self.scholar.search_author_id.assert_called_once_with(updater.SCHOLAR_USER_ID)
+        self.scholar.fill.assert_called_once_with(
+            self.scholar.search_author_id.return_value, sections=["publications"]
+        )
+        self.assertEqual(yaml.safe_load(self.cache.read_text())["papers"]["author:paper"]["citations"], 4)
+
 
 if __name__ == "__main__":
     unittest.main()
