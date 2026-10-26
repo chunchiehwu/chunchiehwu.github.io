@@ -31,9 +31,7 @@ jobs:
 
   update-citations:
     if: github.ref_name == github.event.repository.default_branch
-    # Scholar returns HTTP 403 to the Azure network used by Ubuntu runners.
-    # macOS runners use GitHub's separate macOS cloud.
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: write
@@ -59,21 +57,7 @@ jobs:
 
       - name: Update Google Scholar citations
         id: fetch
-        run: |
-          python - <<'PY'
-          import subprocess
-          import sys
-
-          try:
-              result = subprocess.run(
-                  [sys.executable, "-u", "bin/update_scholar_citations.py", "--force"],
-                  timeout=180,
-              )
-          except subprocess.TimeoutExpired:
-              print("::error::Scholar did not respond within three minutes.")
-              sys.exit(124)
-          sys.exit(result.returncode)
-          PY
+        run: timeout 180 python -u bin/update_scholar_citations.py --force
 
       - name: Report fetch failure
         if: failure() && steps.fetch.outcome == 'failure'
