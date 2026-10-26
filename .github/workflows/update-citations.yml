@@ -57,13 +57,15 @@ jobs:
 
       - name: Update Google Scholar citations
         id: fetch
-        run: timeout 180 python -u bin/update_scholar_citations.py --force
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: timeout 180 python -u bin/update_scholar_citations.py --force --provider serpapi
 
       - name: Report fetch failure
         if: failure() && steps.fetch.outcome == 'failure'
         run: |
           echo "::error::Google Scholar refresh failed; the previous citation data has been retained."
-          echo "Google Scholar refresh failed. Check the fetch log for blocking, network errors, or a timeout. The previous citation data remains published." >> "$GITHUB_STEP_SUMMARY"
+          echo "Google Scholar refresh through SerpApi failed. Check the SERPAPI_API_KEY secret, API quota, and fetch log. The previous citation data remains published." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit and push changed citations
         id: commit

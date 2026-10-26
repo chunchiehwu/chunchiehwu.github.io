@@ -1378,8 +1378,10 @@ gh workflow enable update-citations.yml
 gh workflow run update-citations.yml
 ```
 
-The updater requests only the publication list; coauthor and public-access lookups are unnecessary for citation badges. Workflow runs always fetch live data, even if the cache changed earlier that day. For the same behavior locally, add `--force` to the update command. The log records the requested URLs so a stalled request can be identified.
+The scheduled job retrieves Google Scholar counts through the [SerpApi author API](https://serpapi.com/google-scholar-author-api). Store its key as the GitHub Actions repository secret `SERPAPI_API_KEY`. The key is passed only to the fetch step and is never committed or printed. The job explicitly selects `--provider serpapi`; a missing or invalid key fails visibly instead of falling back to direct fetching.
 
-The updater fetches Google Scholar directly, without a third-party API or proxy. Scholar can reject requests from GitHub-hosted runners with HTTP 403, including on Ubuntu and macOS. Fetch errors and the three-minute timeout fail the update job visibly and can generate GitHub failure emails; the published cache remains available and the next scheduled run tries again. These emails do not mean the site is down or the schedule is disabled. If blocking persists, run the updater locally from a network Scholar accepts and commit the refreshed cache.
+Requests retrieve up to 100 publications per page, keeping the current profile to one request per run (about 13 per month on this schedule). Larger profiles use pagination. SerpApi's [free plan](https://serpapi.com/pricing) currently includes 250 searches per month. Workflow runs always request data, even if the cache changed earlier that day; SerpApi may serve a response cached for up to one hour.
+
+Locally, the script selects SerpApi when `SERPAPI_API_KEY` is set in the environment and otherwise fetches directly. Use `--provider direct` to select direct fetching, and `--force` to bypass the same-day cache check. Direct requests may be blocked with HTTP 403. API, quota, and network errors or the three-minute workflow timeout retain the published cache, fail the job visibly, and allow the next scheduled run to retry.
 
 Check the workflow log and summary if counts stay stale. The keepalive job runs independently of the fetch, but a disabled workflow must be re-enabled before its schedule can resume.

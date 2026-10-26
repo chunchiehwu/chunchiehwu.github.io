@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 
 import argparse
+import json
 import logging
 import os
 import sys
 import yaml
 from datetime import datetime
+from urllib.error import HTTPError, URLError
+from urllib.parse import urlencode
+from urllib.request import urlopen
 from scholarly import scholarly
 
 
@@ -38,7 +42,70 @@ SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
 
 
-def get_scholar_citations(force: bool = False) -> None:
+def fetch_serpapi_publications(api_key: str) -> dict:
+    """Read the public author profile in batches, without logging credential URLs."""
+    if not api_key:
+        raise ValueError("Set the SERPAPI_API_KEY repository secret to use SerpApi.")
+
+    publications = []
+    seen_ids = set()
+    # Bound pagination so a malformed response cannot consume the monthly quota.
+    for start in range(0, 1000, 100):
+        params = urlencode({
+            "engine": "google_scholar_author",
+            "author_id": SCHOLAR_USER_ID,
+            "hl": "en",
+            "num": 100,
+            "start": start,
+            "api_key": api_key,
+        })
+        print(f"Fetching SerpApi publication batch at offset {start}.")
+        try:
+            with urlopen(f"https://serpapi.com/search.json?{params}", timeout=45) as response:
+                data = json.load(response)
+        except HTTPError as error:
+            raise RuntimeError(
+                f"SerpApi returned HTTP {error.code}. Check the API key and account quota."
+            ) from None
+        except (URLError, TimeoutError):
+            raise RuntimeError("SerpApi request failed: network error or timeout.") from None
+        except (ValueError, UnicodeError):
+            raise RuntimeError("SerpApi returned invalid JSON.") from None
+
+        if not isinstance(data, dict) or data.get("error"):
+            raise RuntimeError("SerpApi reported an error. Check the API key and account quota.")
+        if data.get("search_metadata", {}).get("status") != "Success":
+            raise RuntimeError("SerpApi did not return a completed search.")
+        articles = data.get("articles")
+        if not isinstance(articles, list) or not articles:
+            raise RuntimeError("SerpApi returned an empty or invalid publication page.")
+
+        for article in articles:
+            pub_id = article.get("citation_id", "")
+            title = article.get("title")
+            citations = (article.get("cited_by") or {}).get("value", 0)
+            if (
+                not pub_id.startswith(f"{SCHOLAR_USER_ID}:")
+                or pub_id in seen_ids
+                or not title
+                or type(citations) is not int
+                or citations < 0
+            ):
+                raise RuntimeError("SerpApi returned an invalid or repeated publication.")
+            seen_ids.add(pub_id)
+            publications.append({
+                "author_pub_id": pub_id,
+                "bib": {"title": title, "pub_year": str(article.get("year") or "Unknown Year")},
+                "num_citations": citations,
+            })
+
+        if not data.get("serpapi_pagination", {}).get("next"):
+            return {"publications": publications}
+
+    raise RuntimeError("SerpApi exceeded the ten-page limit. Keeping the existing cache.")
+
+
+def get_scholar_citations(force: bool = False, provider: str = "auto") -> None:
     """Fetch and update Google Scholar citation data."""
     print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
     today = datetime.now().strftime("%Y-%m-%d")
@@ -68,16 +135,24 @@ def get_scholar_citations(force: bool = False) -> None:
 
     citation_data = {"metadata": {"last_updated": today}, "papers": {}}
 
-    scholarly.set_timeout(15)
-    scholarly.set_retries(3)
+    api_key = os.environ.get("SERPAPI_API_KEY", "").strip()
+    if provider == "auto":
+        provider = "serpapi" if api_key else "direct"
+    print(f"Citation provider: {provider}")
     try:
-        author = scholarly.search_author_id(SCHOLAR_USER_ID)
-        # The default also requests coauthors and public-access mandates, which
-        # can block independently even when the publication list is available.
-        author_data = scholarly.fill(author, sections=["publications"])
+        if provider == "serpapi":
+            author_data = fetch_serpapi_publications(api_key)
+        elif provider == "direct":
+            scholarly.set_timeout(15)
+            scholarly.set_retries(3)
+            author = scholarly.search_author_id(SCHOLAR_USER_ID)
+            # Only request the publication list needed by the badges.
+            author_data = scholarly.fill(author, sections=["publications"])
+        else:
+            raise ValueError(f"Unknown citation provider: {provider}")
     except Exception as e:
         print(
-            f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
+            f"Error fetching Google Scholar data via {provider}: {e}. Keeping the existing citation data."
         )
         sys.exit(1)
 
@@ -139,11 +214,15 @@ def get_scholar_citations(force: bool = False) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Refresh cached Scholar citations.")
     parser.add_argument("--force", action="store_true", help="Fetch even if the cache was updated today.")
+    parser.add_argument(
+        "--provider", choices=["auto", "serpapi", "direct"], default="auto",
+        help="Use SerpApi when a key is available, or choose a provider explicitly.",
+    )
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     scholarly.set_logger(True)
     try:
-        get_scholar_citations(force=args.force)
+        get_scholar_citations(force=args.force, provider=args.provider)
     except Exception as e:
         print(f"Unexpected error: {e}")
         sys.exit(1)
