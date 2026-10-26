@@ -84,14 +84,19 @@ def fetch_serpapi_publications(api_key: str) -> dict:
             pub_id = article.get("citation_id", "")
             title = article.get("title")
             citations = (article.get("cited_by") or {}).get("value", 0)
-            if (
-                not pub_id.startswith(f"{SCHOLAR_USER_ID}:")
-                or pub_id in seen_ids
-                or not title
-                or type(citations) is not int
-                or citations < 0
-            ):
-                raise RuntimeError("SerpApi returned an invalid or repeated publication.")
+            # SerpApi uses JSON null for papers without any citations.
+            if citations is None:
+                citations = 0
+            if not isinstance(pub_id, str) or not pub_id.startswith(f"{SCHOLAR_USER_ID}:"):
+                raise RuntimeError("SerpApi returned an unexpected publication identifier.")
+            if pub_id in seen_ids:
+                raise RuntimeError("SerpApi returned a repeated publication identifier.")
+            if not isinstance(title, str) or not title.strip():
+                raise RuntimeError("SerpApi returned a publication without a title.")
+            if type(citations) is not int or citations < 0:
+                raise RuntimeError(
+                    f"SerpApi returned an invalid citation count (type: {type(citations).__name__})."
+                )
             seen_ids.add(pub_id)
             publications.append({
                 "author_pub_id": pub_id,

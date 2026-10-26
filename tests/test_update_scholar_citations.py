@@ -155,6 +155,15 @@ class CitationCacheTests(unittest.TestCase):
         self.scholar.search_author_id.assert_not_called()
         self.assertEqual(self.cache.read_bytes(), original)
 
+    def test_serpapi_uncited_papers_accept_null_zero_or_missing_counts(self):
+        for cited_by in ({"value": None}, {"value": 0}, {}):
+            with self.subTest(cited_by=cited_by):
+                page = self.api_page()
+                page["articles"][0]["cited_by"] = cited_by
+                self.api_responses(page)
+                data = updater.fetch_serpapi_publications("test-secret")
+                self.assertEqual(data["publications"][0]["num_citations"], 0)
+
     def test_explicit_direct_fetch_does_not_use_available_api_key(self):
         with patch.dict(updater.os.environ, {"SERPAPI_API_KEY": "test-secret"}):
             updater.get_scholar_citations(provider="direct")
