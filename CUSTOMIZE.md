@@ -1380,4 +1380,6 @@ gh workflow run update-citations.yml
 
 The updater requests only the publication list; coauthor and public-access lookups are unnecessary for citation badges. Workflow runs always fetch live data, even if the cache changed earlier that day. For the same behavior locally, add `--force` to the update command. The log records the requested URLs so a stalled request can be identified.
 
-Google Scholar can block automated requests. Fetch errors and the five-minute timeout fail the update job visibly; the published cache remains available and the next scheduled run tries again. Check the workflow log and summary if counts stay stale. The keepalive job runs independently of the fetch, but a disabled workflow must be re-enabled before its schedule can resume.
+The citation job uses a macOS runner because Scholar rejected requests from the Ubuntu runner's Azure network with HTTP 403. GitHub's [macOS runners use a separate network](https://docs.github.com/en/actions/reference/runners/github-hosted-runners#ip-addresses). The keepalive and site build continue to use Ubuntu.
+
+Google Scholar can still block automated requests. Fetch errors and the three-minute timeout fail the update job visibly; the published cache remains available and the next scheduled run tries again. Check the workflow log and summary if counts stay stale. The keepalive job runs independently of the fetch, but a disabled workflow must be re-enabled before its schedule can resume.
