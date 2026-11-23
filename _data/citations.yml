@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-11-20'
+  last_updated: '2026-11-23'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 26
@@ -90,7 +90,7 @@ papers:
     title: 'The effects of music on brain functional networks: a network analysis'
     year: '2013'
   s4Wt5kQAAAAJ:WF5omc3nYNoC:
-    citations: 34
+    citations: 33
     title: "Acetazolamide-augmented dynamic BOLD (aczBOLD) imaging for assessing cerebrovascular reactivity in chronic steno-occlusive disease of the anterior circulation: An initial \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:Wp0gIr-vW9MC:
@@ -98,7 +98,7 @@ papers:
     title: 'NRSC: A density-connected algorithm for detecting non-redundant subspace clusters'
     year: '2008'
   s4Wt5kQAAAAJ:Y0pCki6q_DkC:
-    citations: 85
+    citations: 86
     title: Graph theoretical analysis of EEG functional connectivity during music perception
     year: '2012'
   s4Wt5kQAAAAJ:YOwf2qJgpHMC:
@@ -150,11 +150,11 @@ papers:
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 98
+    citations: 97
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
-    citations: 5
+    citations: 6
     title: "Benchmark White Matter Hyperintensity Segmentation Methods Fail on Heterogeneous Clinical MRI: A New Dataset and Deep Learning\u2013Based Solutions"
     year: '2026'
   s4Wt5kQAAAAJ:isC4tDSrTZIC:
@@ -174,7 +174,7 @@ papers:
     title: Visual memory correlates with AD biomarkers in cognitively unimpaired individuals
     year: '2026'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 98
+    citations: 97
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
