@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-11-25'
+  last_updated: '2026-11-27'
 papers:
   s4Wt5kQAAAAJ:0EnyYjriUFMC:
     citations: 26
@@ -37,6 +37,10 @@ papers:
     citations: 0
     title: Multimodal MR imaging reveals distinct sensitivity of hippocampal subfields to normal aging and asymptomatic Alzheimer's disease pathology
     year: '2021'
+  s4Wt5kQAAAAJ:JV2RwH3_ST0C:
+    citations: 0
+    title: Spatially localized racial differences in the association between white matter hyperintensities and verbal memory in cognitively unimpaired adults
+    year: '2026'
   s4Wt5kQAAAAJ:KlAtU1dfN6UC:
     citations: 0
     title: Racial differences in cerebral microcirculatory function and cognitive function
@@ -90,7 +94,7 @@ papers:
     title: 'The effects of music on brain functional networks: a network analysis'
     year: '2013'
   s4Wt5kQAAAAJ:WF5omc3nYNoC:
-    citations: 33
+    citations: 34
     title: "Acetazolamide-augmented dynamic BOLD (aczBOLD) imaging for assessing cerebrovascular reactivity in chronic steno-occlusive disease of the anterior circulation: An initial \u2026"
     year: '2017'
   s4Wt5kQAAAAJ:Wp0gIr-vW9MC:
@@ -150,7 +154,7 @@ papers:
     title: "Race modifies default mode connectivity in Alzheimer\u2019s disease"
     year: '2020'
   s4Wt5kQAAAAJ:hFOr9nPyWt4C:
-    citations: 97
+    citations: 98
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2021'
   s4Wt5kQAAAAJ:iH-uZ7U-co4C:
@@ -174,7 +178,7 @@ papers:
     title: Visual memory correlates with AD biomarkers in cognitively unimpaired individuals
     year: '2026'
   s4Wt5kQAAAAJ:mB3voiENLucC:
-    citations: 97
+    citations: 98
     title: Which multiband factor should you choose for your resting-state fMRI study?
     year: '2019'
   s4Wt5kQAAAAJ:mVmsd5A6BfQC:
